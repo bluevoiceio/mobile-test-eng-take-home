@@ -26,20 +26,7 @@
     - Run locally using 'maestro test .maestro/flows' or  or 'maestro test .maestro/flows -e --platform={platform}'
 
 4. **Videos**
-     - iOS
-       - [iOS-run-login-success-recording.mov](../../../Desktop/iOS-run-login-success-recording.mov)
-       - [iOS-run-login-unsuccessful-recording.mov](../../../Desktop/iOS-run-login-unsuccessful-recording.mov)
-       - [iOS-run-open-disclaimer-recording.mov](../../../Desktop/iOS-run-open-disclaimer-recording.mov)
-       - [iOS-run-toggle-dark-mode-recording.mov](../../../Desktop/iOS-run-toggle-dark-mode-recording.mov)
-       - [iOS-run-play-word-game-recording.mov](../../../Desktop/iOS-run-play-word-game-recording.mov)
-       - [iOS-run-all-flows-recording.mov](../../../Desktop/iOS-run-all-flows-recording.mov)
-     - Android
-       - [Android-run-login-success-recording.mov](../../../Desktop/Android-run-login-success-recording.mov)
-       - [Android-run-login-unsuccessful-recording.mov](../../../Desktop/Android-run-login-unsuccessful-recording.mov)
-       - [Android-run-open-disclaimer-recording.mov](../../../Desktop/Android-run-open-disclaimer-recording.mov)
-       - [Android-run-play-word-game-recording.mov](../../../Desktop/Android-run-play-word-game-recording.mov)
-       - [Android-run-toggle-dark-mode-recording.mov](../../../Desktop/Android-run-toggle-dark-mode-recording.mov)
-       - [Android-run-all-flows-recording.mov](../../../Desktop/Android-run-all-flows-recording.mov)
+     - Go to .maestro/test-videos
 
 5. **Improvements**
     - Add more end-to-end tests such play game and verify win status, lose status, additional negative login cases
