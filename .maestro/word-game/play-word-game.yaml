@@ -1,0 +1,6 @@
+appId: com.testengtakehome.app
+---
+- runFlow:
+      file: guess-a-word.yaml
+      env:
+        LETTER: "A"

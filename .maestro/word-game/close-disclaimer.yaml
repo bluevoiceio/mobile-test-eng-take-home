@@ -1,0 +1,13 @@
+appId: com.testengtakehome.app
+---
+- runFlow:
+    when:
+      platform: Android
+    commands:
+      - tapOn: ${output.disclaimerScreen.backBtn}
+- runFlow:
+    when:
+      platform: iOS
+    commands:
+      - swipe:
+          direction: DOWN

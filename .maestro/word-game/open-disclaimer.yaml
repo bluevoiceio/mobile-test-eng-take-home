@@ -1,0 +1,9 @@
+appId: com.testengtakehome.app
+---
+# tap on disclaimer
+- tapOn: ${output.wordGameScreen.disclaimerIcon}
+  
+# assert disclaimer opens
+- assertVisible: ${output.disclaimerScreen.navText}
+- assertVisible: ${output.disclaimerScreen.headerText}
+- assertVisible: ${output.disclaimerScreen.subtext}

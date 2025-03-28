@@ -1,0 +1,14 @@
+appId: com.testengtakehome.app
+---
+# tap settings
+- tapOn: ${output.wordGameScreen.settingsTabIcon}
+  
+# assert settings screen appears
+- assertVisible:
+    text: ${output.settingsScreen.navText}
+    index: ${output.settingsScreen.navTextIndex}
+- assertVisible:
+    text: ${output.settingsScreen.headerText}
+    index: ${output.settingsScreen.headerTextIndex}
+- assertVisible: ${output.settingsScreen.darkModeText}
+- assertVisible: ${output.settingsScreen.logoutBtn}
