@@ -1,0 +1,12 @@
+appId: com.testengtakehome.app
+---
+# go to settings
+- runFlow:
+    when:
+      true:
+        ${GO_TO_SETTINGS == "YES"}
+    commands:
+      - runFlow:
+          file: ../word-game/navigate-settings.yaml
+- runFlow:
+    file: ../settings/logout.yaml

@@ -1,0 +1,22 @@
+appId: com.testengtakehome.app
+---
+- runFlow:
+    when:
+      platform: Android
+    commands:
+      - runFlow:
+          file: ../elements/android/load-elements.yaml
+- runFlow:
+    when:
+      platform: iOS
+    commands:
+      - runFlow:
+          file: ../elements/iOS/load-elements.yaml
+# login
+- runFlow:
+    when:
+      true:
+        ${LOGIN == "YES"}
+    commands:
+      - runFlow:
+          file: ../login/login-success.yaml
