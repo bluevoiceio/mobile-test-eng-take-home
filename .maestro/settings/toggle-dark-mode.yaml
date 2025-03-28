@@ -1,0 +1,5 @@
+appId: com.testengtakehome.app
+---
+# toggle dark mode
+- tapOn:
+    point: ${output.settingsScreen.darkModeToggle}
