@@ -1,0 +1,15 @@
+appId: com.testengtakehome.app
+onFlowStart:
+  - runFlow:
+      file: ../setup/setup.yaml
+      env:
+        LOGIN: "YES"
+onFlowComplete:
+  - runFlow:
+      file: ../setup/tear-down.yaml
+      env:
+        GO_TO_SETTINGS: "YES"
+---
+# Verify user can guess and submit a word
+- runFlow:
+      file: ../word-game/play-word-game.yaml

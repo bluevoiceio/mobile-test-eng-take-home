@@ -1,0 +1,8 @@
+appId: com.testengtakehome.app
+onFlowStart:
+  - runFlow:
+      file: ../setup/setup.yaml
+---
+# Verify login unsuccessful with invalid credentials
+- runFlow:
+      file: ../login/login-unsuccessful.yaml
