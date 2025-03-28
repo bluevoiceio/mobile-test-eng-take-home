@@ -28,9 +28,9 @@ Please feel free to ask any questions if you get stuck along the way! This take 
     - Commit your code changes and videos.
     - Push your changes to a new branch.
 
-5. **Open a Pull Request**
-    - Open a PR OR send us a link of your own version in github.
-    - Ensure your PR includes:
+5. **Create a Fork**
+    - Send us a link of your version in github.
+    - Ensure your README includes:
       - Notes describing your process
       - Code changes
       - Videos of test run-throughs
