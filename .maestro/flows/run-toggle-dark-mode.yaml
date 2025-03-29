@@ -1,0 +1,19 @@
+appId: com.testengtakehome.app
+onFlowStart:
+  - runFlow:
+      file: ../setup/setup.yaml
+      env:
+        LOGIN: "YES"
+onFlowComplete:
+  - runFlow:
+      file: ../setup/tear-down.yaml
+---
+# Verify user can toggle on/off dark mode
+- runFlow:
+      file: ../word-game/navigate-settings.yaml
+- runFlow:
+      file: ../settings/toggle-dark-mode.yaml
+# to-do: add assertion for dark mode
+# toggle back to default mode
+- runFlow:
+    file: ../settings/toggle-dark-mode.yaml

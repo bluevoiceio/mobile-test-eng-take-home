@@ -1,0 +1,5 @@
+appId: com.testengtakehome.app
+---
+# assert user cannot login and sees error message when user taps login button when email and pass fields are empty
+- tapOn: ${output.loginScreen.loginBtn}
+- assertVisible: ${output.loginScreen.loginErrorMsg}

@@ -1,0 +1,17 @@
+appId: com.testengtakehome.app
+onFlowStart:
+    - runFlow:
+          file: ../setup/setup.yaml
+          env:
+              LOGIN: "YES"
+onFlowComplete:
+    - runFlow:
+          file: ../setup/tear-down.yaml
+          env:
+              GO_TO_SETTINGS: "YES"
+---
+# Verify user can open and close disclaimer
+- runFlow:
+      file: ../word-game/open-disclaimer.yaml
+- runFlow:
+      file: ../word-game/close-disclaimer.yaml

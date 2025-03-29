@@ -1,0 +1,44 @@
+appId: com.testengtakehome.app
+---
+# assert login screen is launched
+- assertVisible: ${output.loginScreen.header}
+- assertVisible: ${output.loginScreen.subtext}
+- assertVisible: ${output.loginScreen.emailField}
+- assertVisible: ${output.loginScreen.passField}
+- assertVisible: ${output.loginScreen.loginBtn}
+  
+  # login with valid credentials
+- tapOn:
+      text: ${output.loginScreen.emailField}
+- inputText: ${output.loginCredentials.email}
+- tapOn:
+      text: ${output.loginScreen.passField}
+- inputText: ${output.loginCredentials.password}
+
+ # hide keyboard
+- runFlow:
+    when:
+      platform: iOS
+    commands:
+      - pressKey: Enter
+  
+- tapOn: ${output.loginScreen.loginBtn}
+  
+  # close the save password takeover
+- runFlow:
+    when:
+      platform: iOS
+    commands:
+      - tapOn: "Not Now"
+  
+  # assert user is directed to word game screen
+- assertVisible:
+      text: ${output.wordGameScreen.navText}
+      index: ${output.wordGameScreen.navTextIndex}
+- assertVisible:
+      text: ${output.wordGameScreen.headerText}
+      index: ${output.wordGameScreen.headerTextIndex}
+- assertVisible: ${output.wordGameScreen.disclaimerIcon}
+- assertVisible: ${output.wordGameScreen.subtext}
+- assertVisible: ${output.wordGameScreen.gameTabIcon}
+- assertVisible: ${output.wordGameScreen.settingsTabIcon}

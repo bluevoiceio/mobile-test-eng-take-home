@@ -1,0 +1,13 @@
+appId: com.testengtakehome.app
+onFlowStart:
+    - runFlow:
+        file: ../setup/setup.yaml
+onFlowComplete:
+    - runFlow:
+        file: ../setup/tear-down.yaml
+        env:
+          GO_TO_SETTINGS: "YES"
+---
+# Verify login success with valid credentials
+- runFlow:
+      file: ../login/login-success.yaml

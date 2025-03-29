@@ -1,0 +1,7 @@
+appId: com.testengtakehome.app
+---
+# load screen elements
+- runScript: login.js
+- runScript: word-game.js
+- runScript: settings.js
+- runScript: disclaimer.js

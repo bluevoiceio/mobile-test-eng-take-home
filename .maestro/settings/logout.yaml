@@ -1,0 +1,11 @@
+appId: com.testengtakehome.app
+---
+# tap logout button
+- tapOn: ${output.settingsScreen.logoutBtn}
+  
+# assert login page appears
+- assertVisible: ${output.loginScreen.header}
+- assertVisible: ${output.loginScreen.subtext}
+- assertVisible: ${output.loginScreen.emailField}
+- assertVisible: ${output.loginScreen.passField}
+- assertVisible: ${output.loginScreen.loginBtn}
