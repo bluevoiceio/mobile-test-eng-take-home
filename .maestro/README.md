@@ -11,7 +11,8 @@
    8. Organize tests with page object model
       1. Separate the elements into .js files (Easier to read element names and easier to modify if there are updates)
       2. Separate all the functions in separate .yaml files in each respective directory based on screens
-      3. Call the functions on tests
+      3. Separate the end-to-end test flows under /flows directory - call the elements and functions to complete tests
+      4. Note: I organized the iOS and Android tests together because there were not many differences between the elements (Settings icon) and functions (Close disclaimer needs swipe down on iOS, tap back button on Android). Instead I used parameters to specify iOS/Android elements and conditions to run different actions when needed. But if there were more differences, I would organize the tests separately between iOS/Android.
    9. Run tests again to make sure tests are passing
    10. Record videos of tests
    11. Commit and push changes to branch
@@ -30,6 +31,8 @@
 
 5. **Improvements**
     - Add more end-to-end tests such play game and verify win status, lose status, additional negative login cases
+    - Try to find assertion for dark mode
+    - Add github actions
     - Reduce more duplicate code if possible
     - Reduce run-time if possible
     - Improve setup
