@@ -1,0 +1,28 @@
+appId: com.google.android
+---
+- tapOn: "Google search"
+- inputText: "Expo Go"
+- tapOn:
+      text: "Expo Go"
+      index: 1
+- tapOn: "mobile-test-eng-take-home"
+- tapOn: "Email"
+- inputText: "zuhair"
+- tapOn: "Password"
+- inputText: "test123"
+- tapOn: "Login"
+- tapOn: "A"
+- tapOn: "B"
+- tapOn: "C"
+- tapOn: "D"
+- tapOn: "E"
+- tapOn: "⏎ Submit"
+- tapOn: "F"
+- tapOn: "G"
+- tapOn: "H"
+- tapOn: "I"
+- tapOn: "J"
+- tapOn: "⏎ Submit"
+- tapOn: "Settings"
+- tapOn: "Logout"
+- killApp
