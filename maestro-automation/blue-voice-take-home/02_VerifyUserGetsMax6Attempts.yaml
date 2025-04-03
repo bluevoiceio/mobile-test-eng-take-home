@@ -1,0 +1,78 @@
+appId: host.exp.exponent  # Defines the target app (Expo Go in this case)
+---
+- pressKey: "HOME"  # Ensures we start from the home screen
+- tapOn: "Google search"  # Opens the search bar in the Google app
+- inputText: "Expo Go"  # Enters "Expo Go" into the search bar
+- tapOn:
+        text: "Expo Go"
+        index: 1  # Selects the first search result for "Expo Go"
+- tapOn: "mobile-test-eng-take-home"  # Opens the test app
+
+# Login Process
+- tapOn: "Email"  # Selects the email input field
+- inputText: "zuhair"  # Enters the username/email
+- tapOn: "Password"  # Selects the password input field
+- inputText: "test123"  # Inputs the password
+- tapOn: "Login"  # Presses the login button
+
+# Enter words to validate I get max 6 attempts
+- tapOn: "A"  # Selects element "A"
+- tapOn: "B"  # Selects element "B"
+- tapOn: "C"  # Selects element "C"
+- tapOn: "D"  # Selects element "D"
+- tapOn: "E"  # Selects element "E"
+- tapOn: "⏎ Submit"  # Submits the first attempt
+
+- tapOn: "F"  # Selects element "F"
+- tapOn: "G"  # Selects element "G"
+- tapOn: "H"  # Selects element "H"
+- tapOn: "I"  # Selects element "I"
+- tapOn: "J"  # Selects element "J"
+- tapOn: "⏎ Submit"  # Submits the second attempt
+
+- tapOn: "K"  # Selects element "K"
+- tapOn: "L"  # Selects element "L"
+- tapOn: "M"  # Selects element "M"
+- tapOn: "N"  # Selects element "N"
+- tapOn: "O"  # Selects element "O"
+- tapOn: "⏎ Submit"  # Submits the third attempt
+
+- tapOn: "P"  # Selects element "P"
+- tapOn: "Q"  # Selects element "Q"
+- tapOn: "R"  # Selects element "R"
+- tapOn: "S"  # Selects element "S"
+- tapOn: "T"  # Selects element "T"
+- tapOn: "⏎ Submit"  # Submits the fourth attempt
+
+- tapOn: "U"  # Selects element "U"
+- tapOn: "V"  # Selects element "V"
+- tapOn: "W"  # Selects element "W"
+- tapOn: "X"  # Selects element "X"
+- tapOn: "Y"  # Selects element "Y"
+- tapOn: "⏎ Submit"  # Submits the fifth attempt
+
+- tapOn:
+          text: "N"
+          index: 1
+- tapOn:
+          text: "O"
+          index: 1
+- tapOn:
+          text: "D"
+          index: 1
+- tapOn:
+          text: "E"
+          index: 1
+- tapOn:
+          text: "S"
+          index: 1
+
+# Assert Word is revealed
+
+- assertVisible: "The word was .*" # Since the word is randomly generated decided to assert like this for now
+- assertVisible: "Play Again"
+
+# Logout Process
+- tapOn: "Settings"  # Navigates to settings
+- tapOn: "Logout"  # Logs out of the app
+- pressKey: "HOME"  # Returns to the home screen so that next test can start from a clean state.
