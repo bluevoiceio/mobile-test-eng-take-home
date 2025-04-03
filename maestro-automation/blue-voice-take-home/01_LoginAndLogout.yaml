@@ -1,0 +1,21 @@
+appId: host.exp.exponent  # Defines the target app (Expo Go in this case)
+---
+- pressKey: "HOME"  # Ensures we start from the home screen
+- tapOn: "Google search"  # Opens the search bar in the Google app
+- inputText: "Expo Go"  # Enters "Expo Go" into the search bar
+- tapOn:
+        text: "Expo Go"
+        index: 1  # Selects the first search result for "Expo Go"
+- tapOn: "mobile-test-eng-take-home"  # Opens the test app
+
+# Login Process
+- tapOn: "Email"  # Selects the email input field
+- inputText: "zuhair"  # Enters the username/email
+- tapOn: "Password"  # Selects the password input field
+- inputText: "test123"  # Inputs the password
+- tapOn: "Login"  # Presses the login button
+# Logout Process
+- tapOn: "Settings"  # Navigates to settings
+- tapOn: "Logout"  # Logs out of the app
+
+- pressKey: "HOME"  # Returns to the home screen so that next test can start from a clean state.
